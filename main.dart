@@ -16,7 +16,11 @@ class FarmerApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Farmer Marketplace',
-      theme: ThemeData(primarySwatch: Colors.green, fontFamily: ''),
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        // Remove or set to a specific font family instead of an empty string
+        // fontFamily: 'YourFontFamily', 
+      ),
       home: const MainScreen(),
     );
   }
@@ -51,8 +55,8 @@ class _MainScreenState extends State<MainScreen> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
-        selectedItemColor: Colors.green, // Color for the selected icon
-        unselectedItemColor: Colors.grey, // Color for unselected icons
+        selectedItemColor: Colors.green,
+        unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Products'),
